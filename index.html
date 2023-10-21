@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Purger</title>
+        <title>To Do List</title>
         <script src="project2.js"></script>
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -12,13 +13,18 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <h1 id="Score">Score: 0</h1>
-        <button>Click to Score a Point</button>
-        <h1>Sugar Meno2</h1>
-        <div>
-            <button id="red">red</button>
-            <button id="blue">blue</button>
-            <button id="yellow">yellow</button>
-        </div>
+        <h1>Task List</h1>
+        <form id="new-task">
+            <input id="task" type="text" placeholder="Input Task" autocomplete="off"/>
+            <input id="submit" type="submit">
+            <select  id="priority">
+                <option value="High priority">High</option>
+                <option value="Medium priority">Medium</option>
+                <option value="Low priority">Low</option>
+            </select>
+        </form>
+        <ul id="tasks-list">
+         <label type ="checkbox" >
+        </ul>
     </body>
 </html>
