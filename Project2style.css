@@ -1,0 +1,14 @@
+ .complete{
+text-decoration: line-through;
+}
+.priority{
+    font-size: small;
+    color: rgb(1, 1, 216);
+}
+.Task{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+}
+h1{
+    font-family: 'Times New Roman', Times, serif;
+}
