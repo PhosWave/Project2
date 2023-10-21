@@ -1,29 +1,30 @@
-document.addEventListener("DOMContentLoaded",function(){
-    document.querySelector("#red").onclick= function(){
-        document.querySelector("#Score").style.color="red";
-    }
-    document.querySelector("#blue").onclick= function(){
-        document.querySelector("#Score").style.color="blue";
-    }
-    document.querySelector("#yellow").onclick= function(){
-        document.querySelector("#Score").style.color="yellow";
-    }
-}
-)
+document.addEventListener('DOMContentLoaded', function(){
+document.querySelector("#new-task").onsubmit = function(){
+     const li = document.createElement('li');
+    const priorityx =document.querySelector("#priority").value;
+     let task_test = document.querySelector("#task").value;
+     let new_task_html = `
+        <span class="Task"> ${task_test} </span>
+        <span class="priority"> ${priorityx} </span>
+        <button class="remove">Remove</button>
+        <label type="checkbox">Complete</label>
+              `;
+        li.innerHTML = new_task_html
+    document.querySelector("#tasks-list").append(li);
+    document.querySelector("#task").value = "";
 
-document.addEventListener("DOMContentLoaded",function(){
-    document.querySelector("button").onclick=inc;
+    li.addEventListener("click",function(){
+    li.style.textDecoration="line-through";
+    })
+    var arr = [];
+    arr.push(new_task_html);
+    return false;
 }
-)
-let counter=0;
-function inc(){
-    
-    counter=counter+1;
-
-    document.querySelector("#Score").innerHTML = `Score: ${counter}`;
-
-    if (counter>=10){
-        counter=0;
-     document.querySelector("#Score").innerHTML = "You Win!";
+document.addEventListener("click", function(event){
+    element=event.target;
+    if(element.className === "remove"){
+        element.parentElement.remove();
+        arr[element].remove();
     }
-}
+})
+});
